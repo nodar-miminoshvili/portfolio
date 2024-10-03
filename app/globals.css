@@ -3,13 +3,25 @@
 @tailwind utilities;
 
 :root {
+  --base-background: #fafafa;
+  --text-primary: #333;
+  --accent-color: #5a67d8;
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --base-background: #1c1c1e;
+    --text-primary: #e5e5e5;
+    --accent-color: #7f9cf5;
+  }
 }
 
 body {
+  @apply bg-[--base-background] text-[--text-primary];
 }
 
 @layer utilities {
+  .container {
+    @apply max-w-screen-lg mx-auto;
+  }
 }
