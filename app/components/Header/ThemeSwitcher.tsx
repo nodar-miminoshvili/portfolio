@@ -8,7 +8,9 @@ import { GoSun as SunIcon } from 'react-icons/go';
 
 const ThemeSwitcher = ({ theme }: { theme: Theme }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   let themeIcon: ReactElement;
+
   switch (theme) {
     case 'system':
       themeIcon = <SystemIcon />;
@@ -26,8 +28,9 @@ const ThemeSwitcher = ({ theme }: { theme: Theme }) => {
       <div className="relative ml-auto mr-7 sm:mr-9">
         <button
           onClick={() => setIsOpen(true)}
-          className={`text-xl text-[--accent-color] p-2 rounded-md bg-gray-700 transition-colors hover:bg-gray-600 
-            ${isOpen && '!bg-gray-600'}`}
+          className={`text-xl text-[--accent-color] bg-[--shade-color] p-2 rounded-md transition-colors
+             hover:bg-[--shade-active-color] hover:text-[--accent-active-color]
+            ${isOpen && '!bg-[--shade-active-color] !text-[--accent-active-color]'}`}
         >
           {themeIcon}
         </button>
@@ -35,22 +38,36 @@ const ThemeSwitcher = ({ theme }: { theme: Theme }) => {
         {/* Dropdown */}
         {isOpen && (
           <ul
-            className="themeSwitcher flex justify-between items-center gap-2.5 w-max px-2.5 py-3 
-                text-lg text-[--text-primary] absolute top-[125%] left-1/2 -translate-x-1/2 z-40 
-                 rounded-md shadow-md"
+            className="ThemeSwitcher flex justify-between items-center gap-2 w-max 
+                text-lg absolute top-[125%] left-1/2 -translate-x-1/2 z-20 
+                 rounded-md shadow-md bg-[--shade-color] px-2.5 py-3 text-[--secondary-color]"
           >
-            <li className={`${theme === 'dark' && 'active'} `}>
-              <button title="dark" onClick={() => switchTheme('dark')}>
+            <li>
+              <button
+                title="dark"
+                className={theme === 'dark' ? 'active' : ''}
+                onClick={() => switchTheme('dark')}
+              >
                 <MoonIcon />
               </button>
             </li>
-            <li className={`${theme === 'system' && 'active'} text-[1rem]`}>
-              <button title="system" onClick={() => switchTheme('system')}>
+
+            <li>
+              <button
+                title="system"
+                className={`${theme === 'system' && 'active'} text-[1rem]`}
+                onClick={() => switchTheme('system')}
+              >
                 <SystemIcon />
               </button>
             </li>
-            <li className={`${theme === 'light' && 'active'}  `}>
-              <button title="light" onClick={() => switchTheme('light')}>
+
+            <li>
+              <button
+                title="light"
+                className={theme === 'light' ? 'active' : ''}
+                onClick={() => switchTheme('light')}
+              >
                 <SunIcon />
               </button>
             </li>
@@ -62,7 +79,7 @@ const ThemeSwitcher = ({ theme }: { theme: Theme }) => {
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed top-0 left-0 w-full h-full z-30"
+          className="fixed top-0 left-0 w-full h-full z-10"
         ></div>
       )}
     </div>

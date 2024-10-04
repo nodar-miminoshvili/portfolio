@@ -6,30 +6,54 @@
   --base-background: #fafafa;
   --text-primary: #333;
   --accent-color: #5a67d8;
+  --accent-active-color: #4c51bf;
+  --shade-color: #f1f1f5;
+  --shade-active-color: #e2e2e8;
+  --secondary-color: #a0aec0;
+  --secondary-active-color: #718096;
 }
 
 html.dark {
   --base-background: #1c1c1e;
   --text-primary: #e5e5e5;
   --accent-color: #7f9cf5;
+  --accent-active-color: #a3bffa;
+  --shade-color: #2c2c2e;
+  --shade-active-color: #3a3a3c;
+  --secondary-color: #596e79;
+  --secondary-active-color: #748b95;
 }
 
 html.system {
   @media (prefers-color-scheme: dark) {
-    :root {
-      --base-background: #1c1c1e;
-      --text-primary: #e5e5e5;
-      --accent-color: #7f9cf5;
-    }
+    --base-background: #1c1c1e;
+    --text-primary: #e5e5e5;
+    --accent-color: #7f9cf5;
+    --accent-active-color: #a3bffa;
+    --shade-color: #2c2c2e;
+    --shade-active-color: #3a3a3c;
+    --secondary-color: #596e79;
+    --secondary-active-color: #748b95;
   }
 }
 
 body {
-  @apply bg-[--base-background] text-[--text-primary];
+  @apply bg-[--base-background] text-[--text-primary] transition-colors origin-bottom-right;
 }
 
 @layer utilities {
   .container {
     @apply max-w-screen-lg mx-auto;
+  }
+}
+
+@layer components {
+  .ThemeSwitcher button {
+    @apply flex items-center p-1.5 rounded-full transition-colors 
+    hover:bg-[--shade-active-color] hover:text-[--secondary-active-color];
+
+    &.active {
+      @apply bg-[--shade-active-color] text-[--accent-active-color];
+    }
   }
 }
