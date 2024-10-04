@@ -8,11 +8,19 @@
   --accent-color: #5a67d8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --base-background: #1c1c1e;
-    --text-primary: #e5e5e5;
-    --accent-color: #7f9cf5;
+html.dark {
+  --base-background: #1c1c1e;
+  --text-primary: #e5e5e5;
+  --accent-color: #7f9cf5;
+}
+
+html.system {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --base-background: #1c1c1e;
+      --text-primary: #e5e5e5;
+      --accent-color: #7f9cf5;
+    }
   }
 }
 
