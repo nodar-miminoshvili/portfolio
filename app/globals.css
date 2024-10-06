@@ -41,6 +41,10 @@ body {
   @apply bg-[--base-background] text-[--text-primary] transition-colors origin-bottom-right;
 }
 
+b {
+  @apply text-[--accent-color];
+}
+
 @layer utilities {
   .container {
     @apply max-w-screen-lg mx-auto;
@@ -54,6 +58,53 @@ body {
 
     &.active {
       @apply bg-[--shade-active-color] text-[--accent-active-color];
+    }
+  }
+
+  @keyframes reveal-text {
+    to {
+      transform: scaleX(0);
+    }
+  }
+
+  @keyframes move-cursor {
+    to {
+      transform: translateX(calc(16.25rem + 2px));
+    }
+  }
+
+  @keyframes blink-cursor {
+    0% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .type-effect {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+    &::after {
+      width: 100%;
+      transform-origin: right;
+      background-color: var(--base-background);
+      animation: reveal-text 2s steps(18) forwards;
+    }
+    &::before {
+      z-index: 10;
+      width: 3.5px;
+      background-color: var(--accent-active-color);
+      animation: move-cursor 2s steps(18) forwards, blink-cursor 0.95s linear infinite 2.25s;
     }
   }
 }
