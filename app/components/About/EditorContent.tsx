@@ -5,7 +5,7 @@ const EditorContent = () => {
   const techStack = ['JavaScript', 'TypeScript', 'Tailwind', 'React', 'Next.js'];
 
   return (
-    <ul className="tracking-wider text-[ivory]">
+    <ul className="tracking-wide text-[ivory]">
       <GenerateCodeSnippet objKey="currentLocation" objValue="Tbilisi, Georgia" />
 
       <br />

@@ -11,6 +11,8 @@
   --shade-active-color: #e2e2e8;
   --secondary-color: #a0aec0;
   --secondary-active-color: #718096;
+  --github-link-text: var(--text-primary);
+  --github-link-border: var(--text-primary);
 }
 
 html.dark {
@@ -22,6 +24,8 @@ html.dark {
   --shade-active-color: #3a3a3c;
   --secondary-color: #596e79;
   --secondary-active-color: #748b95;
+  --github-link-text: #d1d5db;
+  --github-link-border: #9ca3af;
 }
 
 html.system {
@@ -34,6 +38,8 @@ html.system {
     --shade-active-color: #3a3a3c;
     --secondary-color: #596e79;
     --secondary-active-color: #748b95;
+    --github-link-text: #d1d5db;
+    --github-link-border: #9ca3af;
   }
 }
 

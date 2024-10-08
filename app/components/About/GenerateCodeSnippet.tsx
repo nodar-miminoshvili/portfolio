@@ -11,7 +11,7 @@ const GenerateCodeSnippet = ({ objKey, objValue }: Props) => {
           {objValue.map(language => (
             <li
               key={language}
-              className='inline objValue after:content-["_,_"] after:text-[ivory] last-of-type:after:hidden'
+              className='inline objValue after:content-["_,_"] after:text-[ivory] last-of-type:after:hidden tracking-normal'
             >
               {`'${language}'`}
             </li>
