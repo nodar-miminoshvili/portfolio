@@ -157,4 +157,58 @@ b {
       display: none;
     }
   }
+
+  @keyframes scroll-container {
+    0% {
+      transform: translate(0);
+    }
+    12% {
+      transform: translateY(-100%);
+    }
+    25% {
+      transform: translateY(-100%);
+    }
+    37% {
+      transform: translateY(-200%);
+    }
+    50% {
+      transform: translateY(-200%);
+    }
+    62% {
+      transform: translateY(-300%);
+    }
+    75% {
+      transform: translateY(-300%);
+    }
+    87% {
+      transform: translateY(-400%);
+    }
+    100% {
+      transform: translateY(-400%);
+    }
+  }
+
+  .scrolling-dashes {
+    animation: scroll-container 5s ease-in-out infinite 2.25s;
+  }
+
+  .shadow-border {
+    box-shadow: 0 0 3px 7px rgba(128, 128, 128, 0.088);
+  }
+
+  @keyframes shifting-bg {
+    from {
+      background-position: left;
+    }
+    to {
+      background-position: right;
+    }
+  }
+
+  .github-grid-link-background {
+    background-size: 300%;
+    background-position: left;
+    background-image: radial-gradient(var(--accent-color), var(--shade-color));
+    animation: shifting-bg 36s linear infinite alternate;
+  }
 }

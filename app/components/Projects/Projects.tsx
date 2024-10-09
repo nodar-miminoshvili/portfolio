@@ -1,9 +1,11 @@
 import Project from './Project';
 import devjobsLight from '@/public/screenshots/light/devjobs-light.png';
-import audioshopLight from '@/public/screenshots/light/audioShop-light.png';
-import easyRental from '@/public/screenshots/light/easyRental.png';
+import audioshopLight from '@/public/screenshots/light/audioShop-light.jpg';
+import easyRental from '@/public/screenshots/light/easyRental.jpg';
 import devjobsDark from '@/public/screenshots/dark/devjobs-dark.png';
-import audioshopDark from '@/public/screenshots/dark/audioShop-dark.png';
+import audioshopDark from '@/public/screenshots/dark/audioShop-dark.jpg';
+import GithubLink from './GithubLink';
+import ScrollingDashes from './ScrollingDashes';
 
 const projects = [
   {
@@ -16,7 +18,7 @@ const projects = [
     },
     liveDemo: 'https://audioshop.vercel.app/',
     codeLink: 'https://github.com/nodar-miminoshvili/audio-store',
-    slideDuration: '7s',
+    slideDuration: '6s',
   },
   {
     title: 'Easy-Rental',
@@ -45,13 +47,17 @@ const projects = [
 const Projects = () => {
   return (
     <section className="my-44">
-      <h3 className="text-center text-2xl font-bold tracking-wide after:content-['_</>'] after:text-[--accent-color]">
-        Projects
-      </h3>
-      <ul className="flex flex-col items-center lg:items-stretch lg:flex-row lg:flex-wrap lg:justify-around gap-y-20 py-20">
+      <div className="text-center text-2xl font-bold tracking-wide justify-center h-12 flex overflow-y-hidden leading-loose">
+        <h3>Projects</h3>
+        <ScrollingDashes />
+      </div>
+
+      <ul className="grid grid-cols-1 auto-rows-fr justify-items-center lg:grid-cols-2 lg:grid-rows-2 gap-16 lg:gap-10 py-16 lg:py-20">
         {projects.map((project, idx) => (
           <Project key={idx} project={project} />
         ))}
+
+        <GithubLink />
       </ul>
     </section>
   );
