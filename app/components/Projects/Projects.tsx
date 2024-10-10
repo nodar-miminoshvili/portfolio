@@ -5,7 +5,6 @@ import easyRental from '@/public/screenshots/light/easyRental.jpg';
 import devjobsDark from '@/public/screenshots/dark/devjobs-dark.png';
 import audioshopDark from '@/public/screenshots/dark/audioShop-dark.jpg';
 import GithubLink from './GithubLink';
-import ScrollingDashes from './ScrollingDashes';
 
 const projects = [
   {
@@ -47,10 +46,9 @@ const projects = [
 const Projects = () => {
   return (
     <section className="my-44">
-      <div className="text-center text-2xl font-bold tracking-wide justify-center h-12 flex overflow-y-hidden leading-loose">
-        <h3>Projects</h3>
-        <ScrollingDashes />
-      </div>
+      <h3 className="text-center text-2xl font-bold tracking-wide after:content-['</>'] after:text-[--accent-color] after:ml-1">
+        Projects
+      </h3>
 
       <ul className="grid grid-cols-1 auto-rows-fr justify-items-center lg:grid-cols-2 lg:grid-rows-2 gap-16 lg:gap-10 py-16 lg:py-20">
         {projects.map((project, idx) => (
