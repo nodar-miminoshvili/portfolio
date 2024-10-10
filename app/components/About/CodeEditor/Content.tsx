@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import GenerateCodeSnippet from './GenerateCodeSnippet';
 
-const EditorContent = () => {
+const Content = () => {
   const techStack = ['JavaScript', 'TypeScript', 'Tailwind', 'React', 'Next.js'];
 
   return (
@@ -16,7 +16,11 @@ const EditorContent = () => {
 
       <li>
         <span className="objKey">.CV</span>
-        <Link href="/" className="text-stone-300 hover:text-neutral-100 transition-colors">
+        <Link
+          href="/CV/Nodar-Miminoshvili.pdf"
+          target="_blank"
+          className="text-stone-300 hover:text-neutral-100 transition-colors"
+        >
           Nodar-Miminoshvili.pdf
         </Link>
       </li>
@@ -25,10 +29,10 @@ const EditorContent = () => {
 
       <GenerateCodeSnippet
         objKey="education"
-        objValue="Tbilisi state university, political Science"
+        objValue="B.A. in Political Science - Tbilisi State University, Georgia"
       />
     </ul>
   );
 };
 
-export default EditorContent;
+export default Content;

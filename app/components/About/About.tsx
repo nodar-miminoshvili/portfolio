@@ -1,4 +1,4 @@
-import CodeEditor from './CodeEditor';
+import CodeEditor from './CodeEditor/CodeEditor';
 import Intro from './Intro';
 
 const About = () => {
