@@ -27,7 +27,7 @@ const contactLinks = [
 
 const Contact = () => {
   return (
-    <section className="mt-4 xs:mt-20 py-8 ">
+    <section id="contact" className="mt-4 xs:mt-20 py-8 ">
       <h4 className="text-center text-2xl font-bold tracking-wide after:content-['@'] after:text-[--accent-color] after:ml-2">
         Contact
       </h4>

@@ -34,7 +34,7 @@ const projects = [
 ];
 const Projects = () => {
   return (
-    <section className="mt-44">
+    <section id="projects" className="mt-28 pt-16">
       <h3 className="text-center text-2xl font-bold tracking-wide after:content-['</>'] after:text-[--accent-color] after:ml-1">
         Projects
       </h3>
