@@ -3,6 +3,7 @@ import './globals.css';
 import { Montserrat } from 'next/font/google';
 import Header from './components/Header/Header';
 import { cookies } from 'next/headers';
+import Footer from './components/Footer/Footer';
 
 const montserrat = Montserrat({
   weight: ['400', '500', '600', '700'],
@@ -30,6 +31,7 @@ export default async function RootLayout({
       <body className={`${montserrat.className} antialiased`}>
         <Header theme={theme} />
         {children}
+        <Footer />
       </body>
     </html>
   );

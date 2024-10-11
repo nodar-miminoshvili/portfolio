@@ -39,7 +39,7 @@ const Projects = () => {
         Projects
       </h3>
 
-      <ul className="grid grid-cols-1 auto-rows-fr justify-items-center lg:grid-cols-2 lg:grid-rows-2 gap-16 lg:gap-10 py-16 lg:py-20">
+      <ul className="grid grid-cols-1 grid-rows-[1fr,1fr,1fr,14rem] md:grid-rows-none md:auto-rows-fr justify-items-center lg:grid-cols-2 lg:grid-rows-2 gap-16 lg:gap-10 py-16 lg:py-20">
         {projects.map((project, idx) => (
           <Project key={idx} project={project} />
         ))}

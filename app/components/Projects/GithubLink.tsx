@@ -9,8 +9,8 @@ const GithubLink = () => {
         rel="noopener noreferrer"
         className="h-full grid place-content-center text-center"
       >
-        <GithubIcon className="text-6xl xs:text-8xl text-white mx-auto  mb-4 transition-colors duration-500 group-hover:text-black" />
-        <p className="text-xl xs:text-2xl font-semibold text-[--accent-color] text-white text-center leading-relaxed">
+        <GithubIcon className="text-6xl md:text-8xl text-white mx-auto  mb-4 transition-colors duration-500 group-hover:text-black" />
+        <p className="text-xl md:text-2xl font-semibold text-[--accent-color] text-white text-center leading-relaxed">
           See All Projects <br />
           on&nbsp;
           <span className="text-white font-bold transition-colors duration-500 group-hover:text-black">
