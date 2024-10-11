@@ -2,7 +2,7 @@ import { FiGithub as GithubIcon } from 'react-icons/fi';
 
 const GithubLink = () => {
   return (
-    <li className="max-h-56 xs:max-h-none w-full max-w-[30rem] rounded-lg hover:shadow-border github-grid-link-background group">
+    <li className="max-h-56 xs:max-h-none w-full max-w-[30rem] rounded-lg hover:shadow-border transition-shadow duration-300 github-grid-link-background group">
       <a
         href="https://github.com/nodar-miminoshvili"
         target="_blank"

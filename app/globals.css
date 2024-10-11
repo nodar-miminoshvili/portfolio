@@ -177,4 +177,8 @@ b {
     background-image: radial-gradient(var(--accent-color), var(--shade-color));
     animation: shifting-bg 36s linear infinite alternate;
   }
+
+  .contact-link-logo {
+    @apply text-2xl text-[--accent-color] opacity-60 group-hover:opacity-100 transition-opacity duration-300;
+  }
 }

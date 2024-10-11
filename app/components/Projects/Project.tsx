@@ -7,10 +7,7 @@ import { FaArrowDown as ArrowIcon } from 'react-icons/fa';
 type Props = {
   project: {
     title: string;
-    screenshots: {
-      light: StaticImageData;
-      dark: StaticImageData;
-    };
+    screenshot: StaticImageData;
     description: string;
     liveDemo: string;
     codeLink: string;
@@ -19,7 +16,7 @@ type Props = {
 };
 
 const Projects = ({
-  project: { title, screenshots, description, liveDemo, codeLink, slideDuration },
+  project: { title, screenshot, description, liveDemo, codeLink, slideDuration },
 }: Props) => {
   return (
     <li
@@ -37,7 +34,7 @@ const Projects = ({
           <ArrowIcon className="text-[--accent-color]" />
         </div>
         <Image
-          src={screenshots.light}
+          src={screenshot}
           alt={title}
           className="w-full h-auto peer-hover:-translate-y-[calc(100%-13rem)] transition-transform ease-linear"
           style={{ transitionDuration: slideDuration }}
@@ -61,7 +58,7 @@ const Projects = ({
           href={codeLink}
           target="_blank"
           className="px-4 py-2.5 rounded-md border-2 border-[--github-link-border] text-[--github-link-text] flex items-start justify-center 
-          gap-1 transition-colors hover:bg-[--shade-active-color] hover:text-[--accent-active-color] hover:border-[--accent-active-color]"
+          gap-1 transition-colors hover:text-[--accent-active-color] hover:border-[--accent-active-color]"
         >
           <GithubIcon className="text-xl" /> View Code
         </Link>
