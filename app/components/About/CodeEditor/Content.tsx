@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import GenerateCodeSnippet from './GenerateCodeSnippet';
 
 const Content = () => {
@@ -16,13 +15,13 @@ const Content = () => {
 
       <li>
         <span className="objKey">.CV</span>
-        <Link
+        <a
           href="/CV/Nodar-Miminoshvili.pdf"
           target="_blank"
           className="text-stone-300 hover:text-neutral-100 transition-colors"
         >
           Nodar-Miminoshvili.pdf
-        </Link>
+        </a>
       </li>
 
       <br />

@@ -20,7 +20,7 @@ const contactLinks = [
   {
     label: 'LinkedIn',
     title: 'in/nodar-miminoshvili',
-    url: 'google.com',
+    url: 'https://www.linkedin.com/in/nodar-miminoshvili-b09767332',
     icon: <LinkedInIcon className="contact-link-logo" />,
   },
 ];

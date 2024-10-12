@@ -16,7 +16,7 @@ const ErrorPage = ({ reset }: { reset: () => void }) => {
         name="description"
         content="Oops! Something went wrong. You can try again or visit the homepage."
       />
-      <link rel="icon" type="image/x-icon" href="/errorIcon/sadFace.png" fetchPriority="high" />
+      <link rel="icon" type="image/x-icon" href="/favicons/sadFace.png" fetchPriority="high" />
 
       <main className="grid place-content-center pb-20 min-h-[calc(100dvh-9.5rem)] text-center text-base lg:text-lg">
         <SadFaceIcon aria-hidden className="text-5xl fill-[--shade-active-color] mx-auto mb-3" />

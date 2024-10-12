@@ -1,5 +1,15 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { HiOutlineEmojiSad as SadFaceIcon } from 'react-icons/hi';
+
+export const metadata: Metadata = {
+  title: 'Page Not Found',
+  description: 'Oops! Could not find the requested Page.',
+  icons: {
+    icon: '/favicons/sadFace.png',
+  },
+};
+
 const NotFound = () => {
   return (
     <main className="grid place-content-center pb-20 min-h-[calc(100dvh-9.5rem)] text-center">
