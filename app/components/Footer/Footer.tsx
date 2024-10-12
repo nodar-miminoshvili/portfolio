@@ -7,11 +7,12 @@ const Footer = () => {
         href="https://github.com/nodar-miminoshvili/portfolio"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-fit mx-auto flex items-center justify-center gap-1.5 font-mono text-sm font-medium 
-        hover:text-[--accent-color] group transition-colors"
+        className="w-fit mx-auto flex items-center justify-center gap-1.5 font-mono text-sm font-medium group"
       >
-        <TagIcon className="text-xl group-hover:text-[tomato] transition-colors" /> Project Source
-        Code
+        <TagIcon className="text-xl group-hover:text-[tomato] transition-colors" />
+        <span className="group-hover:text-[--accent-color] transition-colors">
+          Project Source Code
+        </span>
       </a>
     </footer>
   );
