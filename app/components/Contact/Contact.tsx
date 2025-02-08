@@ -6,8 +6,8 @@ import { CiMail as MailIcon } from 'react-icons/ci';
 const contactLinks = [
   {
     label: 'Email',
-    title: 'nodar.miminoshvili@proton.me',
-    url: 'nodar.miminoshvili@proton.me',
+    title: 'miminoshvilinodar@gmail.com',
+    url: 'miminoshvilinodar@gmail.com',
     isEmail: true,
     icon: <MailIcon className="contact-link-logo" />,
   },

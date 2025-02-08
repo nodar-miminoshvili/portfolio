@@ -1,7 +1,7 @@
 import GenerateCodeSnippet from './GenerateCodeSnippet';
 
 const Content = () => {
-  const techStack = ['JavaScript', 'TypeScript', 'Tailwind', 'React', 'Next.js'];
+  const techStack = ['PHP','JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind', 'SQL', 'OOP', 'Git'];
 
   return (
     <ul className="tracking-wide text-[ivory]">
@@ -14,9 +14,9 @@ const Content = () => {
       <br />
 
       <li>
-        <span className="objKey">.CV</span>
+        <span className="objKey">.resume</span>
         <a
-          href="/CV/Nodar-Miminoshvili.pdf"
+          href="/CV/Nodar-Miminoshvili-Resume.pdf"
           target="_blank"
           className="text-stone-300 hover:text-neutral-100 transition-colors"
         >
